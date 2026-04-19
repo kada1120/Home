@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Text Enlarger</title>
+  <style>
+    #text-input {
+      width: 380px;
+      height: 430px;
+      font-size: 30px;
+      word-wrap: break-word; /* Enable word wrapping */
+      white-space: pre-wrap; /* Preserve newlines */
+      overflow-wrap: break-word; /* Ensure long words break properly */
+    }
+
+    #enlarge-button {
+      padding: 10px 20px;
+      font-size: 18px;
+    }
+
+    #output-text {
+      white-space: pre-wrap; /* Ensure that spaces and line breaks are preserved */
+    }
+  </style>
+</head>
+<body>
+  <textarea id="text-input" placeholder="Enter your text here"></textarea>
+  <button id="enlarge-button">Enlarge Text</button>
+  <p id="output-text"></p>
+
+  <script>
+    const textInput = document.getElementById('text-input');
+    const enlargeButton = document.getElementById('enlarge-button');
+    const outputText = document.getElementById('output-text');
+
+    enlargeButton.addEventListener('click', () => {
+      const inputText = textInput.value;
+      // Replace newlines with <br> for multi-line display
+      const enlargedText = `<span style="font-size: 98px;">${inputText.replace(/\n/g, '<br>')}</span>`;
+      outputText.innerHTML = enlargedText;
+    });
+  </script>
+</body>
+</html>
