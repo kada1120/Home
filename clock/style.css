@@ -1,4 +1,4 @@
-body { background:#ccc; }
+body { background:#ccc; text-align: center; } /* 加入 text-align 置中 */
 
 time {
   display:block;
@@ -76,3 +76,12 @@ time {
   left:-8px;
 }
 
+/* 新增的農曆樣式 */
+#lunar-date {
+  margin-top: 20px;
+  font-size: 1.3rem;
+  color: #444;
+  font-family: "Microsoft JhengHei", "PingFang TC", sans-serif;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+}

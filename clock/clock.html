@@ -5,6 +5,9 @@
   <title> Kada Clock </title>
   <link rel="icon" href="https://kada1120.com/favicon.ico">
   <link rel="stylesheet" href="style.css">
+  
+  <!-- 引入農曆計算庫 -->
+  <script src="https://cdn.jsdelivr.net/npm/lunar-javascript/lunar.min.js"></script>
 </head>
 
 <body>
@@ -28,6 +31,8 @@
   <div id="second" class="hand"></div>
 </time>
 
+  <!-- 新增顯示農曆的區塊 -->
+  <div id="lunar-date"></div>
  
   <script src='jquery.min.js'></script>
   <script src="index.js"></script>
